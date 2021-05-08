@@ -1,53 +1,47 @@
-// однострочный комментарий
-/*
-многострочный комментарий
-*/
+// var, let, const
 
-/**
- * JSDoc комментарий 
- */
+var name = 'Sergey';
+console.log(name);
+name = 'Designer';
+console.log(name);
 
-/**
- * Типы данны:
- * 1. Примитивные
- * - Number: 2019, 1.5, NaN, Infinity
- * - String: "Hello", 'Hello', `Hello`
- * - Boolen: true, false
- * - Null: Null
- * - Undifindet: undifindet,
- * - Symbol()
- */
+var age;
+console.log(age); // undefined
+age = 30;
+console.log(age);
 
-console.log(2021, 1.5) //Number
-console.log(20 * 'Word'); //NaN
-console.log(1 / 0); // Infinity
+var $name = "Ivan";
+console.log($name);
 
-console.log('Hello', "Hello", `Hello`); //String
-console.log(true, false); //Boolen
-console.log(null); //null
-console.log(undefined);
-console.log(Symbol()); //Symbol
+var _name = 'Apple';
+// var 1name = '';  unexpeted Token
 
-/**
- * Типы данны:
- * 2. Object. (Reference Type) Передаются по ссылке
- * -Object: {name: 'Sergey', age: '30'}
- *  * Array: [1, 2, 3]
- *  * Function: function foo() {}
- *  * Date: new Date()
- *  ...
- */
+var camelCase = 20;
+var under_score = 30;
+var UseName = 40; // так называют классы
 
-console.log({ name: 'Sergey', age: '30' }); //Object
-//            ^ Key    ^ Value
-console.table({ name: 'Sergey', age: '30' });
-console.log([1, 2, 3, 4]); //Array
+// Использовать один тип наиминования
+var car;
+console.log(car); //Hosting effect
+var car = 'bmw';
+// var car = 'audi';
+console.log(car);
+console.clear();
 
-/**
- * Особенности:
- * 1. JS динамически типизированый язык
- * 2. Одна и таже переменная хранить в себе любой тип данных
- * 3.Нам не нужно определять тип данных при создании переменных 
- * 4. Если мы хотим хотим статическую  типизацию можно использовать
- * TypeScript или Flow
- */
+// console.log(nickname); error
+let nickname = 'damage';
+nickname = 'dm';
+console.log(nickname);
+
+const color = 'red';
+// color = 'blue'; не может быть переопределен
+// const fillColor; нельзя вызвать до того как константа была определена
+console.log(color);
+
+const user = {
+    name: 'Sergei',
+    age: 33
+};
+
+user.age = 34; // Переопределение содержимого обьекта
+console.log(user);
