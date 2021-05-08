@@ -1,47 +1,51 @@
-// var, let, const
+// преобразование типов данных
 
-var name = 'Sergey';
-console.log(name);
-name = 'Designer';
-console.log(name);
+let value;
 
-var age;
-console.log(age); // undefined
-age = 30;
-console.log(age);
+// Numer to string
+value = String(10);
+value = String(10 + 10);
+value = (40).toString();
 
-var $name = "Ivan";
-console.log($name);
+//Boolean to string
 
-var _name = 'Apple';
-// var 1name = '';  unexpeted Token
+value = String(false);
 
-var camelCase = 20;
-var under_score = 30;
-var UseName = 40; // так называют классы
+// Array to String 
+value = String([1, 2, 3, 4]);
 
-// Использовать один тип наиминования
-var car;
-console.log(car); //Hosting effect
-var car = 'bmw';
-// var car = 'audi';
-console.log(car);
-console.clear();
+//Object to String
+value = String({ name: 'Fikus' });
 
-// console.log(nickname); error
-let nickname = 'damage';
-nickname = 'dm';
-console.log(nickname);
+value = 30 + '' + 30;
 
-const color = 'red';
-// color = 'blue'; не может быть переопределен
-// const fillColor; нельзя вызвать до того как константа была определена
-console.log(color);
+value = 30 - ' dg '; //NaN
+value = 30 - '5';
+value = 30 + '' + undefined;
+value = true + 10; // Явное преобразование
+value = true + undefined; //NaN 
 
-const user = {
-    name: 'Sergei',
-    age: 33
-};
+// String to Number
+value = Number('23');
+value = Number(false);
+value = Number(null); //0
+value = Number('false'); // NaN
+value = Number([1, 2, 3]); // NaN
 
-user.age = 34; // Переопределение содержимого обьекта
-console.log(user);
+value = parseInt('200px'); // Выделит целое число
+value = parseFloat('200.5cm'); // Выделит дробное число
+
+//Boolean
+
+value = Boolean('Hello'); // true
+value = Boolean(''); //false
+value = Boolean(0); // false
+value = Boolean(-100); //true
+value = Boolean(undefined); //false
+value = Boolean(null); //false
+value = Boolean({}); //true
+value = Boolean([]); //true
+
+
+console.log(value);
+console.log(typeof value);
