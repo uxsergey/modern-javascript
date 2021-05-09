@@ -1,51 +1,48 @@
-// преобразование типов данных
+// Numbers
 
+const num1 = 10;
+const num2 = 20;
 let value;
 
-// Numer to string
-value = String(10);
-value = String(10 + 10);
-value = (40).toString();
+// + * / 
 
-//Boolean to string
+value = num1 + num2;
+value = value + 100;
+value += 100;
+value = 4;
+// value = 5 % 2;
+value++; // Инкимент
+value--; // Дикримент
+--value; //Если Инкимент/Дикримент стоит перед переменной то измненения 
+++value; // произойдут на этойже строке если после то на следующей
 
-value = String(false);
+value = 0.6 + 0.7; // не точные вычисления
 
-// Array to String 
-value = String([1, 2, 3, 4]);
+//Методы испаравления при не тчных вычислениях
 
-//Object to String
-value = String({ name: 'Fikus' });
+// value = parseFloat(value.toFixed(1));
+value = (0.6 * 10 + 0.7 * 10) / 10;
 
-value = 30 + '' + 30;
+//Method Math
 
-value = 30 - ' dg '; //NaN
-value = 30 - '5';
-value = 30 + '' + undefined;
-value = true + 10; // Явное преобразование
-value = true + undefined; //NaN 
+value = Math.PI;
+value = Math.random();
+value = Math.round(2.4);
+value = Math.ceil(2.1); // Округление в большую сторону
+value = Math.floor(2.9); // Округление в меньшую сторону
+value = Math.min(2, 12, 15, 0, 12);
+value = Math.max(2, 12, 15, 0, 12);
+value = Math.floor(Math.random() * 10 + 1); // Рандомне число до 10
 
-// String to Number
-value = Number('23');
-value = Number(false);
-value = Number(null); //0
-value = Number('false'); // NaN
-value = Number([1, 2, 3]); // NaN
+const arr = ['black',
+    'red',
+    'yellow',
+    'pink',
+    'white',
+    'blue',
+    'orange',
+    'green'
+];
+value = Math.floor(Math.random() * arr.length); // Рандомное значение и массива arr
 
-value = parseInt('200px'); // Выделит целое число
-value = parseFloat('200.5cm'); // Выделит дробное число
-
-//Boolean
-
-value = Boolean('Hello'); // true
-value = Boolean(''); //false
-value = Boolean(0); // false
-value = Boolean(-100); //true
-value = Boolean(undefined); //false
-value = Boolean(null); //false
-value = Boolean({}); //true
-value = Boolean([]); //true
-
-
-console.log(value);
-console.log(typeof value);
+console.log(value, arr[value]);

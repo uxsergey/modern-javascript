@@ -4,3 +4,4 @@
     - Lesson 01: Add script
     - Lesson 02: Data Types 
     - Lesson 03: Var let const
+    - Lesson 04: converting data types
